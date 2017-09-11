@@ -99,3 +99,5 @@ floorl(long double x)
 	}
 	return (u.e);
 }
+
+__weak_reference(floorl, __floorl);

@@ -26,6 +26,7 @@
  * $FreeBSD$
  */
 
+#include <sys/cdefs.h>
 #include <float.h>
 #include <math.h>
 
@@ -55,6 +56,7 @@ imprecise_powl(long double x, long double y)
 	return pow(x, y);
 }
 DECLARE_WEAK(powl);
+__weak_reference(powl, __powl);
 
 #define DECLARE_IMPRECISE(f) \
 	long double imprecise_ ## f ## l(long double v) { return f(v); }\

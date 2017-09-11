@@ -132,3 +132,5 @@ sinhl(long double x)
     /* |x| > o_threshold, sinh(x) overflow */
 	return x*shuge;
 }
+
+__weak_reference(sinhl, __sinhl);

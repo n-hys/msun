@@ -85,3 +85,5 @@ cosf(float x)
 	    }
 	}
 }
+
+__weak_reference(cosf, __cosf);

@@ -26,7 +26,8 @@
  * $FreeBSD$
  */
 
-#include <sys/endian.h>
+#include <sys/cdefs.h>
+#include <endian.h>
 #include <ctype.h>
 #include <float.h>
 #include <math.h>
@@ -34,6 +35,17 @@
 #include <strings.h>
 
 #include "math_private.h"
+
+static int
+digittoint(int c)
+{
+	unsigned char s = c & 0xFF;
+	if (isdigit(s))
+		return s - '0';
+	if (islower(s))
+		return s - 'a' + 10;
+	return s - 'A' + 10;
+}
 
 /*
  * Scan a string of hexadecimal digits (the format nan(3) expects) and
@@ -64,7 +76,7 @@ _scan_nan(uint32_t *words, int num_words, const char *s)
 		;
 
 	/* Scan backwards, filling in the bits in words[] as we go. */
-#if _BYTE_ORDER == _LITTLE_ENDIAN
+#if BYTE_ORDER == LITTLE_ENDIAN
 	for (bitpos = 0; bitpos < 32 * num_words; bitpos += 4) {
 #else
 	for (bitpos = 32 * num_words - 4; bitpos >= 0; bitpos -= 4) {
@@ -84,7 +96,7 @@ nan(const char *s)
 	} u;
 
 	_scan_nan(u.bits, 2, s);
-#if _BYTE_ORDER == _LITTLE_ENDIAN
+#if BYTE_ORDER == LITTLE_ENDIAN
 	u.bits[1] |= 0x7ff80000;
 #else
 	u.bits[0] |= 0x7ff80000;

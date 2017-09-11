@@ -28,9 +28,9 @@
 #include <fenv.h>
 #include <math.h>
 
-#ifndef type
+#ifndef _type
 __FBSDID("$FreeBSD$");
-#define type		double
+#define _type		double
 #define	roundit		rint
 #define dtype		long
 #define	fn		lrint
@@ -44,7 +44,7 @@ __FBSDID("$FreeBSD$");
  * sake of correctness; an MD implementation could be more efficient.
  */
 dtype
-fn(type x)
+fn(_type x)
 {
 	fenv_t env;
 	dtype d;

@@ -63,3 +63,5 @@ __ieee754_asinf(float x)
 	t = pio2-2.0*(s+s*w);
 	if(hx>0) return t; else return -t;
 }
+
+__weak_reference(asinf, __asinf);

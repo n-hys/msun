@@ -247,3 +247,5 @@ __ieee754_powf(float x, float y)
 	else SET_FLOAT_WORD(z,j);
 	return sn*z;
 }
+
+__weak_reference(powf, __powf);

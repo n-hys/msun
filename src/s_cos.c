@@ -86,4 +86,5 @@ cos(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(cos, cosl);
+__weak_reference(cos, __cosl);
 #endif

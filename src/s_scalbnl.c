@@ -69,3 +69,4 @@ scalbnl (long double x, int n)
 }
 
 __strong_reference(scalbnl, ldexpl);
+__weak_reference(ldexpl, __ldexpl);

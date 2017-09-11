@@ -93,3 +93,5 @@ tanl(long double x)
 
 	RETURNI(hi);
 }
+
+__weak_reference(tanl, __tanl);

@@ -118,3 +118,5 @@ atan2l(long double y, long double x)
 	    	    return  (z-pi_lo)-pi;/* atan(-,-) */
 	}
 }
+
+__weak_reference(atan2l, __atan2l);

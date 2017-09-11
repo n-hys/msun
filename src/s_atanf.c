@@ -90,3 +90,5 @@ atanf(float x)
 	    return (hx<0)? -z:z;
 	}
 }
+
+__weak_reference(atanf, __atanf);

@@ -83,3 +83,5 @@ sinf(float x)
 	    }
 	}
 }
+
+__weak_reference(sinf, __sinf);

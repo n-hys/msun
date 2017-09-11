@@ -55,3 +55,5 @@ tanhf(float x)
 	}
 	return (jx>=0)? z: -z;
 }
+
+__weak_reference(tanhf, __tanhf);

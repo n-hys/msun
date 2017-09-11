@@ -81,4 +81,5 @@ tanh(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(tanh, tanhl);
+__weak_reference(tanh, __tanhl);
 #endif

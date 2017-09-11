@@ -87,3 +87,5 @@ __ieee754_logf(float x)
 		     return dk*ln2_hi-((s*(f-R)-dk*ln2_lo)-f);
 	}
 }
+
+__weak_reference(logf, __logf);

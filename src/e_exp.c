@@ -161,4 +161,5 @@ __ieee754_exp(double x)	/* default IEEE double exp */
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(exp, expl);
+__weak_reference(exp, __expl);
 #endif

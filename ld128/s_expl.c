@@ -324,3 +324,5 @@ expm1l(long double x)
 		t = SUM2P(tbl[n2].hi - twomk, tbl[n2].lo + t * (q + r1));
 	RETURNI(t * twopk);
 }
+
+__weak_reference(expl, __expl);

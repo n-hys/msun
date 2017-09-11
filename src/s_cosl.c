@@ -93,3 +93,5 @@ cosl(long double x)
 	
 	RETURNI(hi);
 }
+
+__weak_reference(cosl, __cosl);

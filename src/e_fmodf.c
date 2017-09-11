@@ -102,3 +102,5 @@ __ieee754_fmodf(float x, float y)
 	}
 	return x;		/* exact output */
 }
+
+__weak_reference(fmodf, __fmodf);

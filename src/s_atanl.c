@@ -83,3 +83,5 @@ atanl(long double x)
 	    return (expsign<0)? -z:z;
 	}
 }
+
+__weak_reference(atanl, __atanl);

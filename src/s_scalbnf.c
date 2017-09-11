@@ -55,3 +55,4 @@ scalbnf (float x, int n)
 }
 
 __strong_reference(scalbnf, ldexpf);
+__weak_reference(ldexpf, __ldexpf);

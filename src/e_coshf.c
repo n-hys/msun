@@ -57,3 +57,5 @@ __ieee754_coshf(float x)
     /* |x| > overflowthresold, cosh(x) overflow */
 	return huge*huge;
 }
+
+__weak_reference(coshf, __coshf);

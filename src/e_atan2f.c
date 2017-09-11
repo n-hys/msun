@@ -94,3 +94,5 @@ __ieee754_atan2f(float y, float x)
 	    	    return  (z-pi_lo)-pi;/* atan(-,-) */
 	}
 }
+
+__weak_reference(atan2f, __atan2f);

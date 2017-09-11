@@ -28,3 +28,5 @@ fabs(double x)
 	SET_HIGH_WORD(x,high&0x7fffffff);
         return x;
 }
+
+__weak_reference(fabs, __fabs);

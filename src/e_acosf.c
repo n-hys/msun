@@ -75,3 +75,5 @@ __ieee754_acosf(float x)
 	    return (float)2.0*(df+w);
 	}
 }
+
+__weak_reference(acosf, __acosf);

@@ -59,3 +59,5 @@ floorf(float x)
 	SET_FLOAT_WORD(x,i0);
 	return x;
 }
+
+__weak_reference(floorf, __floorf);

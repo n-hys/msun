@@ -41,3 +41,5 @@ frexpf(float x, int *eptr)
 	SET_FLOAT_WORD(x,hx);
 	return x;
 }
+
+__weak_reference(frexpf, __frexpf);

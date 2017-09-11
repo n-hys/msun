@@ -28,6 +28,7 @@
  * $FreeBSD$
  */
 
+#include <sys/cdefs.h>
 #include <math.h>
 
 #include "fpmath.h"
@@ -41,3 +42,5 @@ fabsl(long double x)
 	u.bits.sign = 0;
 	return (u.e);
 }
+
+__weak_reference(fabsl, __fabsl);

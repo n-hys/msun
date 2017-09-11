@@ -147,3 +147,5 @@ fmodl(long double x, long double y)
 	x = ux.e * one;		/* create necessary signal */
 	return x;		/* exact output */
 }
+
+__weak_reference(fmodl, __fmodl);

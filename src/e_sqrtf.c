@@ -13,6 +13,7 @@
  * ====================================================
  */
 
+#include <sys/cdefs.h>
 #ifndef lint
 static char rcsid[] = "$FreeBSD$";
 #endif
@@ -87,3 +88,5 @@ __ieee754_sqrtf(float x)
 	SET_FLOAT_WORD(z,ix);
 	return z;
 }
+
+__weak_reference(sqrtf, __sqrtf);

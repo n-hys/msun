@@ -135,4 +135,5 @@ __ieee754_fmod(double x, double y)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(fmod, fmodl);
+__weak_reference(fmod, __fmodl);
 #endif

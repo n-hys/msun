@@ -18,7 +18,12 @@
 #define	_MATH_PRIVATE_H_
 
 #include <sys/types.h>
-#include <machine/endian.h>
+#include <endian.h>
+
+typedef uint64_t u_int64_t;
+typedef uint32_t u_int32_t;
+typedef uint16_t u_int16_t;
+typedef uint8_t u_int8_t;
 
 /*
  * The original fdlibm code used statements like:

@@ -172,3 +172,5 @@ tanhl(long double x)
 	if (jx<0) s = -1;
 	RETURNI(s*z);
 }
+
+__weak_reference(tanhl, __tanhl);

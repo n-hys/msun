@@ -86,4 +86,5 @@ sin(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(sin, sinl);
+__weak_reference(sin, __sinl);
 #endif

@@ -157,3 +157,5 @@ sqrtl(long double x)
 	u.bits.exp--;
 	return (u.e);
 }
+
+__weak_reference(sqrtl, __sqrtl);

@@ -91,3 +91,5 @@ sinl(long double x)
 	
 	RETURNI(hi);
 }
+
+__weak_reference(sinl, __sinl);

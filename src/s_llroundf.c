@@ -1,7 +1,7 @@
 #include <sys/cdefs.h>
 __FBSDID("$FreeBSD$");
 
-#define type		float
+#define _type		float
 #define	roundit		roundf
 #define dtype		long long
 #define	DTYPE_MIN	LLONG_MIN

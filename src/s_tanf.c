@@ -70,3 +70,5 @@ tanf(float x)
 	    return __kernel_tandf(y,1-((n&1)<<1));
 	}
 }
+
+__weak_reference(tanf, __tanf);

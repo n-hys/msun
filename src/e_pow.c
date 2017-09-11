@@ -304,3 +304,5 @@ __ieee754_pow(double x, double y)
 	else SET_HIGH_WORD(z,j);
 	return s*z;
 }
+
+__weak_reference(pow, __pow);

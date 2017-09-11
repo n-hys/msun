@@ -70,3 +70,5 @@ __ieee754_log10f(float x)
 	return y*log10_2lo + (lo+hi)*ivln10lo + lo*ivln10hi + hi*ivln10hi +
 	    y*log10_2hi;
 }
+
+__weak_reference(log10f, __log10f);

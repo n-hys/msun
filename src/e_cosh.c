@@ -82,4 +82,5 @@ __ieee754_cosh(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(cosh, coshl);
+__weak_reference(cosh, __coshl);
 #endif

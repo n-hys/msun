@@ -29,9 +29,9 @@
 #include <fenv.h>
 #include <math.h>
 
-#ifndef type
+#ifndef _type
 __FBSDID("$FreeBSD$");
-#define type		double
+#define _type		double
 #define	roundit		round
 #define dtype		long
 #define	DTYPE_MIN	LONG_MIN
@@ -47,13 +47,13 @@ __FBSDID("$FreeBSD$");
  * that everything is in range.  At compile time, INRANGE(x) should reduce to
  * two floating-point comparisons in the former case, or TRUE otherwise.
  */
-static const type dtype_min = DTYPE_MIN - 0.5;
-static const type dtype_max = DTYPE_MAX + 0.5;
+static const _type dtype_min = DTYPE_MIN - 0.5;
+static const _type dtype_max = DTYPE_MAX + 0.5;
 #define	INRANGE(x)	(dtype_max - DTYPE_MAX != 0.5 || \
 			 ((x) > dtype_min && (x) < dtype_max))
 
 dtype
-fn(type x)
+fn(_type x)
 {
 
 	if (INRANGE(x)) {

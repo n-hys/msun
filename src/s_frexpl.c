@@ -26,6 +26,7 @@
  * $FreeBSD$
  */
 
+#include <sys/cdefs.h>
 #include <float.h>
 #include <math.h>
 
@@ -60,3 +61,5 @@ frexpl(long double x, int *ex)
 	}
 	return (u.e);
 }
+
+__weak_reference(frexpl, __frexpl);

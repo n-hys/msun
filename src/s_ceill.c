@@ -99,3 +99,5 @@ ceill(long double x)
 	}
 	return (u.e);
 }
+
+__weak_reference(ceill, __ceill);

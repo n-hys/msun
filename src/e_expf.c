@@ -96,3 +96,5 @@ __ieee754_expf(float x)
 	    return y*twopk*twom100;
 	}
 }
+
+__weak_reference(expf, __expf);

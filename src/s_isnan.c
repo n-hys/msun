@@ -26,6 +26,7 @@
  * $FreeBSD$
  */
 
+#include <sys/cdefs.h>
 #include <math.h>
 
 #include "fpmath.h"

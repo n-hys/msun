@@ -36,6 +36,7 @@
  * $FreeBSD$
  */
 
+#include <sys/cdefs.h>
 #include <float.h>
 #include <math.h>
 #include <sys/types.h>
@@ -99,3 +100,5 @@ modfl(long double x, long double *iptr)
 		}
 	}
 }
+
+__weak_reference(modfl, __modfl);

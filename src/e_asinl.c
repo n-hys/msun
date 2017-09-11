@@ -75,3 +75,5 @@ asinl(long double x)
 	}    
 	if(expsign>0) return t; else return -t;    
 }
+
+__weak_reference(asinl, __asinl);

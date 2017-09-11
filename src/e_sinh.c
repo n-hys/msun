@@ -76,4 +76,5 @@ __ieee754_sinh(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(sinh, sinhl);
+__weak_reference(sinh, __sinhl);
 #endif

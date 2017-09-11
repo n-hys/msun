@@ -14,6 +14,10 @@
  * $FreeBSD$
  */
 
+#if 1
+#include_next <math.h>
+#else
+
 #ifndef _MATH_H_
 #define	_MATH_H_
 
@@ -508,3 +512,4 @@ void		sincosl(long double, long double *, long double *);
 __END_DECLS
 
 #endif /* !_MATH_H_ */
+#endif

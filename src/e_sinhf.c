@@ -54,3 +54,5 @@ __ieee754_sinhf(float x)
     /* |x| > overflowthresold, sinh(x) overflow */
 	return x*shuge;
 }
+
+__weak_reference(sinhf, __sinhf);

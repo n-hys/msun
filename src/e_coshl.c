@@ -130,3 +130,5 @@ coshl(long double x)
     /* |x| > o_threshold, cosh(x) overflow */
 	RETURNI(huge*huge);
 }
+
+__weak_reference(coshl, __coshl);

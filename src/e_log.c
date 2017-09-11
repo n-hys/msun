@@ -144,4 +144,5 @@ __ieee754_log(double x)
 
 #if (LDBL_MANT_DIG == 53)
 __weak_reference(log, logl);
+__weak_reference(log, __logl);
 #endif
