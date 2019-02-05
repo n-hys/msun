@@ -1,4 +1,6 @@
 /*-
+ * SPDX-License-Identifier: BSD-2-Clause-FreeBSD
+ *
  * Copyright (c) 2004 David Schultz <das@FreeBSD.ORG>
  * All rights reserved.
  *
@@ -53,6 +55,7 @@ __isnanf(float f)
 	return (u.bits.exp == 255 && u.bits.man != 0);
 }
 
+#if (LDBL_MANT_DIG != 53)
 int
 __isnanl(long double e)
 {
@@ -62,5 +65,11 @@ __isnanl(long double e)
 	mask_nbit_l(u);
 	return (u.bits.exp == 32767 && (u.bits.manl != 0 || u.bits.manh != 0));
 }
+#endif
 
 __weak_reference(__isnanf, isnanf);
+#if (LDBL_MANT_DIG == 53)
+__weak_reference(isnan, isnanl);
+#else
+__weak_reference(__isnanl, isnanl);
+#endif
