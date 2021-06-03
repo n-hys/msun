@@ -275,6 +275,7 @@ FBSD_1.3 {
 	log2l;
 	logl;
 	powl;
+	__powl;
 	sinhl;
 	tanhl;
 	/* Implemented as weak aliases for imprecise versions */
